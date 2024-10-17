@@ -1,0 +1,61 @@
+@baseUrl = http://localhost:3333
+@createdMealId = {{fetch_meals.response.body.$.meals.[0].id}}
+
+# @name register_user
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe@email.com"
+}
+
+###
+
+# @name create_meal
+POST {{baseUrl}}/meals
+Content-Type: application/json
+
+{
+  "name": "Breakfast",
+  "description": "Bread with jam and coffee",
+  "isOnDiet": true,
+  "date": "2024-06-05T10:00:00.000Z"
+}
+
+###
+
+# @name fetch_meals
+GET {{baseUrl}}/meals
+Content-Type: application/json
+
+###
+
+# @name get_meal_by_id
+GET {{baseUrl}}/meals/{{createdMealId}}
+Content-Type: application/json
+
+###
+
+# @name update_meal
+PUT {{baseUrl}}/meals/{{createdMealId}}
+Content-Type: application/json
+
+{
+  "name": "Breakfast updated",
+  "description": "Eggs with sausage and orange juice",
+  "isOnDiet": false,
+  "date": "2024-06-05T11:00:00.000Z"
+}
+
+###
+
+# @name delete_meal
+DELETE {{baseUrl}}/meals/a2m4oo12tad06bvzmdo1uyqv
+Content-Type: application/json
+
+###
+
+# @name get_metrics_meals
+GET {{baseUrl}}/meals/metrics
+Content-Type: application/json
