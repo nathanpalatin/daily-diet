@@ -1,56 +1,58 @@
+
 # 🥗 Daily Diet
 
-> Um sistema para registrar refeições de um usuário e acompanhar sua jornada de alimentação.
+> A system to record a user's meals and track their eating journey.
 
-## Como começar
+## Getting Started
 
-Para iniciar a aplicação na porta especifica (3333), utilize: 
+To start the application on a specific port (3333), use:
 
 ```bash
 bun dev
 ```
-A aplicação utiliza variáveis de ambiente para definir banco de dados e porta, logo crie uma arquivo `.env` e defina as variáveis de ambiente.
+
+The application uses environment variables to define the database and port, so create a `.env` file and set the environment variables.
+
 ```env
 PORT=3333
 DATABASE_URL=./db.sqlite
 ```
 
-Os testes de ponta a ponta também utilizam variáveis de ambiente, logo crie um arquivo `.env.test` e defina as variáveis de ambiente.
+End-to-end tests also use environment variables, so create a `.env.test` file and set the environment variables.
+
 ```env
 DATABASE_URL=./db-test.sqlite
 ```
 
-aqui definimos somente uma variável nova para o banco de dados ser separado, então para executar os testes use (usamos apenas teste de ponta a ponta nesse projeto):
+Here we define only a new variable for the test database to be separated, so to run the tests, use (we only use end-to-end tests in this project):
 
 ```bash
 bun run test
 ```
 
-## Regras da aplicação
+## Application Rules
 
-- [x] Deve ser possível criar um usuário
-- [x] Deve ser possível identificar o usuário entre as requisições
-- [x] Deve ser possível registrar uma refeição feita, com as seguintes informações:
-  - Nome
-  - Descrição
-  - Data e Hora
-  - Está dentro ou não da dieta
-- [x] As refeições devem ser relacionadas a um usuário.
-- [x] Deve ser possível listar todas as refeições de um usuário
-- [x] Deve ser possível visualizar uma única refeição
-- [x] Deve ser possível editar uma refeição, podendo alterar todos os dados acima
-- [x] Deve ser possível apagar uma refeição
-- [x] Deve ser possível recuperar as métricas de um usuário
-  - Quantidade total de refeições registradas
-  - Quantidade total de refeições dentro da dieta
-  - Quantidade total de refeições fora da dieta
-  - Melhor sequência de refeições dentro da dieta
-- [x] O usuário só pode visualizar, editar e apagar as refeições o qual ele criou
+- [x] It must be possible to create a user.
+- [x] It must be possible to identify the user between requests.
+- [x] It must be possible to record a meal with the following information:
+  - Name
+  - Description
+  - Date and Time
+  - Whether it is within the diet or not
+- [x] Meals must be related to a user.
+- [x] It must be possible to list all meals for a user.
+- [x] It must be possible to view a single meal.
+- [x] It must be possible to edit a meal, being able to change all the above data.
+- [x] It must be possible to delete a meal.
+- [x] It must be possible to retrieve user metrics:
+  - Total number of registered meals.
+  - Total number of meals within the diet.
+  - Total number of meals outside the diet.
+  - Best streak of meals within the diet.
+- [x] A user can only view, edit, and delete meals that they created.
 
-## ☕ Contatos
+## ☕ Contact
 
-Você vai me encontrar em qualquer uma das redes sociais abaixo:
+You can find me on any of the social networks below:
 
-<a href = "mailto: leo.azannielttt@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23EA4335?style=for-the-badge&logo=gmail&logoColor=white" target="_blank" margin-right="10px"></a>
-<a href="https://www.linkedin.com/in/leandroazanniel/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
-<a href="https://api.whatsapp.com/send?phone=5592985406269" target="_blank"><img src="https://img.shields.io/badge/-WhatsApp-%25D366?style=for-the-badge&logo=whatsapp&logoColor=white" target="_blank"></a>
+<a href="https://www.linkedin.com/in/nathanpalatin/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
